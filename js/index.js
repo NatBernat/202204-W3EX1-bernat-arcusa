@@ -1,27 +1,11 @@
-/* import InputText from "./components/InputText.js";
-import SendButton from "./components/SendButton.js";
-import ShownText from "./components/ShownText.js";
-
-const containerElement = document.querySelector(".container");
-
-const textInput = new InputText(containerElement);
-const button = new SendButton(
-  containerElement,
-  "Send",
-  () => {
-    const printedText = new ShownText();
-  },
-  true
-);
- */
-
+/* eslint-disable no-unused-vars */
 import Component from "./components/Component.js";
 import InputText from "./components/InputText.js";
 import SendButton from "./components/SendButton.js";
 import ShownText from "./components/ShownText.js";
 
 const bodyElement = document.querySelector("body");
-const divComponent = new Component(bodyElement, "div", "paragraph");
+const divComponentText = new Component(bodyElement, "div", "paragraph");
 const paragraphContainer = document.querySelector(".paragraph");
 
 const inputParagraphComponent = new InputText(
@@ -29,12 +13,27 @@ const inputParagraphComponent = new InputText(
   "text",
   "paragraph__input"
 );
-
 const textInput = document.querySelector(".paragraph__input");
-const buttonFunction = () => {
+const paragraphElement = document.querySelector(".paragraph__output");
+const paragraphButtonFunction = () => {
   paragraphElement.innerHTML = textInput.value;
 };
-const textButton = new SendButton(paragraphContainer, "Send", buttonFunction);
-
+const textButton = new SendButton(
+  paragraphContainer,
+  "Send",
+  paragraphButtonFunction
+);
 const paragraphOutput = new ShownText(paragraphContainer, "paragraph__output");
-const paragraphElement = document.querySelector(".paragraph__output");
+
+/* const divComponentImage = new Component(bodyElement, "div", "image");
+const imageContainer = document.querySelector(".image");
+const inputImageComponent = new InputText(
+  imageContainer,
+  "text",
+  "image__input"
+);
+
+const imageButtonFunction = () => {
+  paragraphElement.innerHTML = textInput.value;
+};
+const imageButton = new SendButton(imageContainer, "Send", imageButtonFunction); */
