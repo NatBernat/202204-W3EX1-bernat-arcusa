@@ -7,7 +7,7 @@ class SendButton extends Component {
 
   isSubmit;
 
-  constructor(parentElement, text, action, isSubmit = false) {
+  constructor(parentElement, text, action, isSubmit) {
     super(parentElement, "button", "action-button");
     this.text = text;
     this.isSubmit = isSubmit;

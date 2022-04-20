@@ -24,16 +24,3 @@ const textButton = new SendButton(
   paragraphButtonFunction
 );
 const paragraphOutput = new ShownText(paragraphContainer, "paragraph__output");
-
-/* const divComponentImage = new Component(bodyElement, "div", "image");
-const imageContainer = document.querySelector(".image");
-const inputImageComponent = new InputText(
-  imageContainer,
-  "text",
-  "image__input"
-);
-
-const imageButtonFunction = () => {
-  paragraphElement.innerHTML = textInput.value;
-};
-const imageButton = new SendButton(imageContainer, "Send", imageButtonFunction); */
